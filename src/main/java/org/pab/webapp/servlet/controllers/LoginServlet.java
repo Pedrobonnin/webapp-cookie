@@ -80,6 +80,7 @@ public class LoginServlet extends HttpServlet {
         }
 
         if (errores.isEmpty()) {
+            //Creamos una nueva Cookie
 
             if (USERNAME.equals(username) && PASSWORD.equals(password)){
                 Cookie usernameCookie = new Cookie("username",username);
