@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
 
 
         Optional<String> cookieOptional = auth.getUsername(req);
-        if (cookieOptional.isPresent()){
+        if (cookieOptional.isPresent()){ // con isPresent manejamos la cookies "si hay cookie presente inicia"
             resp.setContentType("text/html");
 
 
@@ -67,9 +67,8 @@ public class LoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-
         List<String> errores = new ArrayList<>();
-        if (username == null || username.isEmpty()) {
+        if (username == null || username.isEmpty()) { //valida el ingleso de dato
 
             errores.add("El usuario no puede ser vacio");
         }
@@ -82,10 +81,10 @@ public class LoginServlet extends HttpServlet {
         if (errores.isEmpty()) {
             //Creamos una nueva Cookie
 
-            if (USERNAME.equals(username) && PASSWORD.equals(password)){
+            if (USERNAME.equals(username) && PASSWORD.equals(password)){ // valida la existencia de usuario
                 Cookie usernameCookie = new Cookie("username",username);
 
-                // usernameCookie.setMaxAge(0*0*0*24);  //Tiempo en segundo que estara abierta la sesion
+
 
                 resp.addCookie(usernameCookie);
                 resp.sendRedirect(req.getContextPath()+"/login.html");

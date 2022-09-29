@@ -8,11 +8,11 @@ import java.util.Optional;
 
 public class LoginServiceImpl implements LoginService{
     @Override
-    public Optional<String> getUsername(HttpServletRequest req) {
-        Cookie[] cookies = req.getCookies() != null ? req.getCookies(): new Cookie[0];
+    public Optional<String> getUsername(HttpServletRequest req) {//Obtenemos la cookie
+        Cookie[] cookies = req.getCookies() != null ? req.getCookies(): new Cookie[0]; //Leemos la cookie
         return Arrays.stream(cookies)
-                .filter(c-> "username".equals(c.getName()))
-                .map(Cookie::getValue)
-                .findAny();
+                .filter(c-> "username".equals(c.getName())) //buscamos la Cookie
+                .map(Cookie::getValue) //para convertir de un flujo a otro de un tipo Cookie a un tipo String
+                .findAny(); //obtenemos la cookie
     }
 }

@@ -13,11 +13,18 @@ body{
     padding: 15px;
     border-radius: 15px;
     width: 20%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
 
 }
 fieldset{
     border: 3px solid dodgerblue;
 }
+
+h1{
+    padding: 10px;
+    text-align: center;
+}
+
 h2{
     padding: 10px;
     text-align: center;
@@ -65,13 +72,14 @@ h2{
 }
 
 
-----------------TABLA---------------------------
+/*----------------TABLA--------------------------*/
 
 .container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	box-shadow: 0 0 20px rgba(0,0,0,0.9);
 }
 
 table {
@@ -119,9 +127,10 @@ td :hover{
 
 }
 
-----------------lista-----------------
+/*----------------lista-----------------*/
+
  #lista ul {
-    list-style:none;
+    list-style-type: none;
 }
 
 #lista ul li {
@@ -130,7 +139,7 @@ td :hover{
 }
 
 #lista ul li a {
-    display:block;
+    display: flex;
     width:300px;
     height:28px;
     background-color:#013978;
@@ -148,4 +157,42 @@ td :hover{
     -webkit-box-shadow:10px 10px 20px #000000;
     transform:rotate(4deg); box-shadow:10px 10px 20px #000000;
     margin-left: 10px;
+}
+
+
+
+.error{
+    color: #c00000;
+}
+/*------------------------------- href ----------------------------*/
+
+.link {
+  display: flex;
+  gap: 0.625%;
+}
+
+.lk {
+  flex: 1;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  line-height: 3;
+  color: black;
+  border-radius: 10px;
+}
+
+.lk:link,
+.lk:visited,
+.lk:focus {
+  background-color: rgb(17, 54, 71);
+  color: #0066ff;
+}
+
+.lk:hover {
+  background-color: rgb(20, 63, 83);
+}
+
+.lk:active {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
 }

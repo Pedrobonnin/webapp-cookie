@@ -12,7 +12,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Formulario Login</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
 <%
 if(errores!= null && errores.size()>0){
 %>
-<ul>
+<ul class="error">
 <%
 for(String error:errores){
 %>
@@ -33,6 +33,11 @@ for(String error:errores){
 </ul>
 <%}%>
 
+<style>
+
+
+
+</style>
 
 <div class="box">
     <h2>Iniciar Sesión</h2>
@@ -50,10 +55,16 @@ for(String error:errores){
             </div>
             <br><br>
             <div>
-                <input type="submit" name="submit" id="submit" value="login">
+                <input type="submit" name="submit" id="submit" value="Iniciar Sesion">
             </div>
         </fieldset>
     </form>
+    <br>
+    <div>
+      <nav class="link">
+          <a class="lk" href="/webapp-cookie/index.html">Volver</a>
+      </nav>
+    </div>
 </div>
 </body>
 </html>

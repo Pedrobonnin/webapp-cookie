@@ -36,7 +36,7 @@ public class ProductoServlet extends HttpServlet {
                 out.println("<html>");
                 out.println("    <head>");
                 out.println("        <meta charset=\"UTF-8\">");
-                out.println("        <link rel=\"stylesheet\" href=\"style.css\">");
+                out.println("        <link rel=\"stylesheet\" href=\"./style.css\">");
                 out.println("        <title>Listado de Productos</title>");
                 out.println("    </head>");
                 out.println("    <body>");
@@ -71,7 +71,7 @@ public class ProductoServlet extends HttpServlet {
                 out.println("        <div id=\"lista\">");
                 out.println("           <ul> ");
                 out.println("               <li><a href='"+req.getContextPath()+"/index.html'>volver</a></li>");
-                out.println("               <li><a href='"+req.getContextPath()+"/login'>cerrar sesion</a></li>");
+                out.println("               <li><a href='"+req.getContextPath()+"/logout'>cerrar sesion</a></li>");
                 out.println("           </ul> ");
                 out.println("        </div>");
 
